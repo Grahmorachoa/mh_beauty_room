@@ -1,0 +1,120 @@
+{
+    "meta": {
+        "title": "MH Hair Salon - Professional Hair Services",
+        "description": "Professional hair salon in Warsaw. Styling, coloring, hair care."
+    },
+    "nav": {
+        "gallery": "Gallery",
+        "services": "Services",
+        "contact": "Contact"
+    },
+    "hero": {
+        "title": "MH Hair Salon",
+        "subtitle": "Beauty starts here",
+        "button": "Book now"
+    },
+    "about": {
+        "title": "About Us",
+        "motto": "Your path to perfect style",
+        "content": [
+            "In our salon, beauty is born from professionalism, care and an individual approach to each client. We believe that style is not just about appearance - it's a reflection of your personality and inner harmony.",
+            "Our experienced stylists take care of every detail with attention and passion. We use only the best hair care products from world-renowned brands to ensure the results last long.",
+            "Modern cutting, coloring, and care techniques help us highlight your uniqueness and create styles that truly impress."
+        ],
+        "philosophy": "MH Hair Salon is not just about haircuts and styling - it's an atmosphere of coziness, trust and inspiration.",
+        "conclusion": "Entrust us with your beauty - together we will create your new image full of confidence, style and charisma.",
+        "instagram": "Our Instagram",
+        "booking": "Book online"
+    },
+    "services": {
+        "title": "Our Services",
+        "women": "For Women",
+        "men": "For Men",
+        "kids": "For Kids",
+        "women_services": [
+            {
+                "name": "Women's haircut",
+                "price": "150 zł"
+            },
+            {
+                "name": "Hair styling",
+                "price": "120 zł"
+            },
+            {
+                "name": "Full coloring",
+                "price": "250 zł"
+            },
+            {
+                "name": "Balayage/Ombre",
+                "price": "350 zł"
+            },
+            {
+                "name": "Keratin treatment",
+                "price": "300 zł"
+            },
+            {
+                "name": "Bridal hairstyle",
+                "price": "400 zł"
+            },
+            {
+                "name": "Girls haircut",
+                "price": "70 zł"
+            },
+            {
+                "name": "Braiding",
+                "price": "90 zł"
+            }
+        ],
+        "men_services": [
+            {
+                "name": "Classic haircut",
+                "price": "80 zł"
+            },
+            {
+                "name": "Clipper cut",
+                "price": "60 zł"
+            },
+            {
+                "name": "Shaving",
+                "price": "70 zł"
+            },
+            {
+                "name": "Beard styling",
+                "price": "90 zł"
+            },
+            {
+                "name": "Hair coloring",
+                "price": "150 zł"
+            },
+            {
+                "name": "Beard care",
+                "price": "120 zł"
+            },
+            {
+                "name": "Boys haircut",
+                "price": "60 zł"
+            }
+        ]
+    },
+    "gallery": {
+        "title": "Our Works"
+    },
+    "contact": {
+        "title": "Contact",
+        "subtitle": "Book an appointment or visit our salon",
+        "phone": "Phone",
+        "address": "Address",
+        "hours": "Opening hours",
+        "hours_value": "Mon-Fri: 8:00 AM - 8:00 PM<br>Sat: 9:00 AM - 4:00 PM"
+    },
+    "footer": {
+        "links": [
+            "Home",
+            "Services",
+            "Gallery",
+            "About",
+            "Contact"
+        ],
+        "copyright": "© 2025 MH Hair Salon. All rights reserved."
+    }
+}

@@ -1,0 +1,124 @@
+{
+    "meta": {
+        "title": "MH Salon Fryzjerski - Profesjonalne Usługi Fryzjerskie",
+        "description": "Profesjonalny salon fryzjerski w Warszawie. Stylizacje, koloryzacja, pielęgnacja włosów."
+    },
+    "nav": {
+        "gallery": "Galeria",
+        "services": "Usługi",
+        "contact": "Kontakt"
+    },
+    "hero": {
+        "title": "MH Salon Fryzjerski",
+        "subtitle": "Piękno zaczyna się tutaj",
+        "button": "Zapisz się"
+    },
+    "about": {
+        "title": "O Nas",
+        "motto": "Twoja droga do idealnego stylu",
+        "content": [
+            "W naszym salonie piękno rodzi się z profesjonalizmu, troski i indywidualnego podejścia do każdego klienta. Wierzymy, że styl to nie tylko wygląd zewnętrzny — to odzwierciedlenie Twojej osobowości i wewnętrznej harmonii.",
+            "Nasi doświadczeni styliści z uwagą i pasją dbają o każdy detal. Używamy wyłącznie najlepszych kosmetyków do pielęgnacji włosów, sprawdzonych marek światowych, aby efekt cieszył Cię przez długi czas."
+        ],
+        "philosophy": "MH Salon Fryzjerski to nie tylko strzyżenie i stylizacja — to atmosfera przytulności, zaufania i inspiracji.",
+        "conclusion": "Powierz nam swoje piękno — razem stworzymy Twój nowy wizerunek pełen pewności siebie, stylu i charyzmy."
+    },
+    "services": {
+        "title": "Nasze Usługi",
+        "women": "Dla Kobiet",
+        "men": "Dla Mężczyzn",
+        "kids": "Dla Dzieci",
+        "women_services": [
+            {
+                "name": "Strzyżenie damskie",
+                "price": "150 zł"
+            },
+            {
+                "name": "Modelowanie włosów",
+                "price": "120 zł"
+            },
+            {
+                "name": "Koloryzacja pełna",
+                "price": "250 zł"
+            },
+            {
+                "name": "Balejaż/Ombre",
+                "price": "350 zł"
+            },
+            {
+                "name": "Pielęgnacja keratinowa",
+                "price": "300 zł"
+            },
+            {
+                "name": "Fryzura ślubna",
+                "price": "400 zł"
+            }
+        ],
+        "men_services": [
+            {
+                "name": "Strzyżenie klasyczne",
+                "price": "80 zł"
+            },
+            {
+                "name": "Strzyżenie maszynką",
+                "price": "60 zł"
+            },
+            {
+                "name": "Golenie twarzy",
+                "price": "70 zł"
+            },
+            {
+                "name": "Modelowanie brody",
+                "price": "90 zł"
+            },
+            {
+                "name": "Koloryzacja włosów",
+                "price": "150 zł"
+            },
+            {
+                "name": "Pielęgnacja brody",
+                "price": "120 zł"
+            }
+        ],
+        "kids_services": [
+            {
+                "name": "Strzyżenie dziewczynki",
+                "price": "70 zł"
+            },
+            {
+                "name": "Strzyżenie chłopca",
+                "price": "60 zł"
+            },
+            {
+                "name": "Pierwsza wizyta",
+                "price": "50 zł"
+            },
+            {
+                "name": "Plecenie warkoczyków",
+                "price": "90 zł"
+            }
+        ]
+    },
+    "gallery": {
+        "title": "Nasze Realizacje"
+    },
+    "contact": {
+        "title": "Kontakt",
+        "subtitle": "Umów się na wizytę lub odwiedź nasz salon",
+        "phone": "Telefon",
+        "address": "Adres",
+        "hours": "Godziny otwarcia",
+        "hours_value": "Pon-Pt: 8:00 - 20:00<br>Sb: 9:00 - 16:00"
+    },
+    "footer": {
+        "links": [
+            "Strona Główna",
+            "Usługi",
+            "Galeria",
+            "O Nas",
+            "Kontakt"
+        ],
+        "copyright": "2025 MH Salon Fryzjerski. Wszystkie prawa zastrzeżone.",
+        "credits": "Projekt i realizacja: MH Team"
+    }
+}

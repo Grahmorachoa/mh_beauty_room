@@ -1,0 +1,810 @@
+@import url('hero.css');
+@import url('ourwork.css');
+@import url('contact.css');
+@import url('services.css');
+@import url('gallery.css');
+
+/* =============== БАЗОВЫЕ НАСТРОЙКИ =============== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #FFF8E1;
+    /* Кремовый фон */
+    color: #333;
+    /* Цвет основного текста */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+/* =============== ХЕДЕР =============== */
+header {
+    background-color: transparent;
+    box-shadow: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+
+
+.nav-link {
+    font-weight: 800;
+    transition: all 0.3s ease;
+    color: #ae0e0e;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #780606;
+    /* Коралловый */
+}
+
+.nav-link:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #FF6F61;
+    bottom: -5px;
+    left: 0;
+}
+
+/* Стили при скролле */
+/* Состояние во время анимации */
+#mainHeader.scrolling {
+    background-color: rgba(202, 202, 202, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+#mainHeader.scrolling-reverse {
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+/* Финальное состояние после скролла */
+#mainHeader.scrolled {
+    background-color: rgba(238, 225, 225, 0.85) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    animation: headerAppear 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Анимация появления */
+@keyframes headerAppear {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Цвета текста и иконок */
+#mainHeader.scrolled .nav-link,
+#mainHeader.scrolled .social-link,
+#mainHeader.scrolled .language-trigger {
+    color: #000 !important;
+    transition: color 0.4s 0.2s ease-out;
+}
+
+#mainHeader.scrolled .social-link i.bi-facebook,
+#mainHeader.scrolled .social-link i.bi-instagram {
+    color: #121111 !important;
+    transform: scale(1.1);
+    transition: all 0.4s 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#mainHeader.scrolled .nav-link:hover {
+    color: #780606 !important;
+    text-shadow: 0 0 8px rgba(120, 6, 6, 0.2);
+}
+
+/* Логотип */
+#mainHeader.scrolled .logo img {
+    animation: logoAppear 0.6s 0.1s ease-out forwards;
+}
+
+@keyframes logoAppear {
+    0% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Логотип */
+.logo img {
+    height: 4rem;
+    width: auto;
+    border-radius: 10px;
+    filter: brightness(0) saturate(100%) invert(16%) sepia(89%) saturate(3644%) hue-rotate(351deg) brightness(89%) contrast(112%);
+    /* Этот фильтр даст цвет #ad1b1b */
+}
+
+/* Соцсети */
+.social-link {
+    color: #ae0e0e;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: #FF6F61;
+}
+
+/* Языковое меню */
+/* Основные стили */
+/* Language Selector */
+.language-selector {
+    position: relative;
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    z-index: 1000;
+}
+
+/* Trigger Button */
+.language-trigger {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #ae0e0e;
+    font-weight: 500;
+}
+
+.language-trigger:hover {
+    border-color: rgba(174, 14, 14, 0.3);
+    background: rgba(174, 14, 14, 0.05);
+}
+
+.language-trigger[aria-expanded="true"] {
+    border-color: rgba(174, 14, 14, 0.5);
+    background: rgba(174, 14, 14, 0.1);
+}
+
+.language-code {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.language-chevron {
+    transition: transform 0.3s ease;
+}
+
+.language-trigger[aria-expanded="true"] .language-chevron {
+    transform: rotate(180deg);
+}
+
+/* Dropdown Menu */
+.language-dropdown {
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0;
+    width: 140px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.language-dropdown[data-visible="true"] {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Language List */
+.language-list {
+    list-style: none;
+    padding: 8px 0;
+    margin: 0;
+}
+
+.language-item {
+    padding: 0;
+    margin: 0;
+}
+
+.language-link {
+    display: block;
+    padding: 8px 16px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.language-item.active .language-link {
+    color: #a47148;
+    font-weight: 600;
+}
+
+.language-item:not(.active):hover .language-link {
+    background: rgba(174, 14, 14, 0.05);
+    color: #a47148;
+}
+
+/* Divider */
+.language-item:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Бургер-кнопка */
+.burger-button {
+    display: none;
+    /* По умолчанию скрыта */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.burger-line {
+    width: 100%;
+    height: 3px;
+    background: #ae0e0e;
+    transition: all 0.3s ease;
+}
+
+/* Анимация бургера при открытии */
+.burger-button.active .burger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-button.active .burger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-button.active .burger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Анимация мобильного меню */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 248, 225, 0.98);
+    z-index: 1000;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+body.menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.mobile-menu.d-none {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.mobile-menu:not(.d-none) {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.mobile-link {
+    font-size: 1.5rem;
+    color: #ae0e0e;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.mobile-link:hover {
+    color: #780606;
+}
+
+#burgerButton {
+    z-index: 1001;
+    font-size: 1.8rem;
+    color: #ae0e0e;
+    background: none;
+    border: none;
+}
+
+.language-switch a {
+    margin: 0 0.5rem;
+    color: #ae0e0e;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    color: #ae0e0e;
+}
+
+/* о нас */
+
+/* Основные стили секции */
+.about-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.bg-parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    transition: transform 0.5s ease-out;
+}
+
+.bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(250, 240, 230, 0.9) 0%, rgba(250, 240, 230, 0.7) 50%, rgba(250, 240, 230, 0.3) 100%);
+}
+
+/* Стили контента */
+.content-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+.brand-name {
+    background: linear-gradient(90deg, #d4a373 0%, #a47148 50%, #6c4b2a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    display: inline-block;
+}
+
+.salon-part {
+    font-family: 'Playfair Display', serif;
+}
+
+.fryzjerski-part {
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.highlight-dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #d4a373;
+    border-radius: 50%;
+    display: inline-block;
+    bottom: 5px;
+    right: -15px;
+}
+
+.divider-custom {
+    margin: 1.5rem auto;
+    width: 20rem;
+    height: 3px;
+    background: linear-gradient(90deg, #d4a373, transparent);
+}
+
+/* Стили текста */
+.about-content {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.about-motto {
+    font-size: 1.5rem;
+    color: #161515;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #5a5a5a;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+}
+
+.signature-line {
+    width: 100px;
+    height: 2px;
+    background: #d4a373;
+    margin: 2rem auto;
+    opacity: 0.5;
+}
+
+.salon-philosophy {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #884a0c;
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    position: relative;
+}
+
+.salon-philosophy:before,
+.salon-philosophy:after {
+    content: '"';
+    font-size: 2rem;
+    color: #d4a373;
+    opacity: 0.3;
+}
+
+.conclusion {
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Кнопки */
+.btn-instagram {
+    background: black;
+    border: none;
+    color: #f5dede
+}
+
+.btn-primary {
+    background: #d4a373;
+    border-color: #d4a373;
+}
+
+/* Для основной кнопки */
+.btn-primary:hover {
+    background: #b38a5f;
+    border-color: #b38a5f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 1s ease;
+    box-shadow: 5px 5px 10px rgba(16, 16, 15, 0.5);
+}
+
+/* Для Instagram кнопки */
+.btn-instagram:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0.9;
+    transition: all 1s ease;
+    box-shadow: 5px 5px 10px rgba(16, 16, 15, 0.5);
+}
+
+/* Декоративные элементы */
+.decor-scissors,
+.decor-comb {
+    position: absolute;
+    font-size: 5rem;
+    color: rgba(212, 163, 115, 0.1);
+    z-index: 1;
+}
+
+.decor-scissors {
+    top: 20%;
+    left: 5%;
+}
+
+.decor-comb {
+    bottom: 10%;
+    right: 5%;
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        padding: 60px 0;
+    }
+
+    .about-content {
+        padding: 25px;
+    }
+
+    .action-buttons .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+/* =============== ФУТЕР =============== */
+/* Основные стили футера */
+.footer {
+    position: relative;
+    background: #2a2a2a;
+    color: #ffffff;
+    padding: 4rem 0 2rem;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-wave {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%232a2a2a" opacity=".25"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%232a2a2a"/></svg>');
+    background-size: cover;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Логотип */
+.footer-logo-img {
+    height: 50px;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+.footer-logo:hover .footer-logo-img {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* Меню */
+.footer-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.footer-link:hover {
+    color: #ffffff;
+}
+
+.footer-link:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #d4a373;
+    transition: width 0.3s ease;
+}
+
+.footer-link:hover:after {
+    width: 100%;
+}
+
+/* Социальные иконки */
+.footer-social {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: #d4a373;
+    transform: translateY(-3px);
+}
+
+/* Контактная информация */
+.footer-info {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+}
+
+.footer-info i {
+    color: #d4a373;
+    margin-right: 0.5rem;
+}
+
+/* Копирайт */
+.footer-copyright {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.dev-link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.dev-link:hover {
+    color: #d4a373;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .footer-menu {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .footer {
+        padding: 3rem 0 1.5rem;
+    }
+}
+
+/* кнопка наверх  */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #d4a373;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+.scroll-top-btn:hover {
+    background: #b38a5f;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.scroll-top-btn.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top-btn svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.scroll-top-btn:hover svg {
+    transform: translateY(-2px);
+}
+
+
+
+/* =============== АДАПТИВНОСТЬ =============== */
+
+@media (min-width: 992px) {
+    .mobile-menu {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+
+    .burger-button {
+        display: none !important;
+    }
+
+    body.menu-open {
+        overflow: auto !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .language-selector {
+        display: none !important;
+        /* Добавляем !important для приоритета */
+    }
+
+    /* .burger-button {
+        display: flex !important;
+    } */
+
+    .language-trigger {
+        display: none !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+}

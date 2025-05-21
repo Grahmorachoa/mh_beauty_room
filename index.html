@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MH Salon Fryzjerski - Profesjonalne usługi fryzjerskie w Warszawie</title>
+    <meta name="description"
+        content="MH Salon Fryzjerski w Warszawie oferuje profesjonalne strzyżenie, koloryzację i stylizację włosów. Umów się na wizytę już dziś i odkryj swój nowy styl!">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mhsalon.pl/">
+
+    <!-- Hreflang tags for multilingual support -->
+    <link rel="alternate" hreflang="pl" href="https://mhsalon.pl/">
+    <link rel="alternate" hreflang="uk" href="https://mhsalon.pl/uk/">
+    <link rel="alternate" hreflang="en" href="https://mhsalon.pl/en/">
+    <link rel="alternate" hreflang="x-default" href="https://mhsalon.pl/">
+
+    <!-- Favicon and Apple Touch Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mhsalon.pl/">
+    <meta property="og:title" content="MH Salon Fryzjerski - Profesjonalne usługi fryzjerskie w Warszawie">
+    <meta property="og:description"
+        content="MH Salon Fryzjerski w Warszawie oferuje profesjonalne strzyżenie, koloryzację i stylizację włosów. Umów się na wizytę już dziś!">
+    <meta property="og:image" content="https://mhsalon.pl/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mhsalon.pl/">
+    <meta property="twitter:title" content="MH Salon Fryzjerski - Profesjonalne usługi fryzjerskie w Warszawie">
+    <meta property="twitter:description"
+        content="MH Salon Fryzjerski w Warszawie oferuje profesjonalne strzyżenie, koloryzację i stylizację włosów. Umów się na wizytę już dziś!">
+    <meta property="twitter:image" content="https://mhsalon.pl/images/twitter-image.jpg">
+
+    <!-- Preload critical fonts -->
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&family=Inter:wght@300;400;500&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&family=Inter:wght@300;400;500&display=swap"
+            rel="stylesheet">
+    </noscript>
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    </noscript>
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+            rel="stylesheet">
+    </noscript>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+
+    <!-- AOS animations -->
+    <link href="libs/aos/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Structured Data / Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HairSalon",
+      "name": "MH Salon Fryzjerski",
+      "image": "https://mhsalon.pl/images/logo.svg",
+      "url": "https://mhsalon.pl",
+      "telephone": "+48784466844",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ul. Szlenkierow 1",
+        "addressLocality": "Warszawa",
+        "postalCode": "01-470",
+        "addressCountry": "PL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 52.2375555,
+        "longitude": 20.9674332
+      },
+      
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "priceRange": "$$",
+      "sameAs": [
+        "https://www.facebook.com/mhsalonfryzjerski",
+        "https://www.instagram.com/mhsalonfryzjerski"
+      ]
+    </script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="mainHeader" class="fixed-top">
+        <nav class="container d-flex justify-content-between align-items-center py-3">
+            <div class="d-none d-md-flex gap-4">
+                <a href="#gallery" class="nav-link" data-i18n="nav.gallery">Galeria</a>
+                <a href="#services" class="nav-link" data-i18n="nav.services">Usługi</a>
+                <a href="#contact" class="nav-link" data-i18n="nav.contact">Kontakt</a>
+            </div>
+
+            <div>
+                <a href="#top" class="logo">
+                    <img src="/images/logo.svg" alt="MH Salon Fryzjerski Logo" width="120" height="40">
+                </a>
+            </div>
+
+            <!-- Right section: social media + languages -->
+            <div class="d-flex align-items-center gap-3">
+                <a href="https://facebook.com/mhsalonfryzjerski" target="_blank" rel="noopener noreferrer"
+                    class="social-link" aria-label="Facebook">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="https://instagram.com/mhsalonfryzjerski" target="_blank" rel="noopener noreferrer"
+                    class="social-link" aria-label="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+
+                <!-- Language selector -->
+                <div class="language-selector">
+                    <button class="language-trigger" aria-expanded="false" aria-controls="language-dropdown">
+                        <span class="language-code">UA</span>
+                        <svg class="language-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                            aria-hidden="true">
+                            <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <div id="language-dropdown" class="language-dropdown">
+                        <ul class="language-list">
+                            <li class="language-item active" data-lang="uk">
+                                <a href="/uk/" class="language-link" data-lang="uk">Українська</a>
+                            </li>
+                            <li class="language-item" data-lang="pl">
+                                <a href="/" class="language-link" data-lang="pl">Polski</a>
+                            </li>
+                            <li class="language-item" data-lang="en">
+                                <a href="/en/" class="language-link" data-lang="en">English</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Mobile burger menu -->
+                <button class="btn d-md-none" id="burgerButton" aria-label="Menu">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu d-none" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <a href="#gallery" class="mobile-link" data-i18n="nav.gallery">Galeria</a>
+            <a href="#services" class="mobile-link" data-i18n="nav.services">Usługi</a>
+            <a href="#contact" class="mobile-link" data-i18n="nav.contact">Kontakt</a>
+            <div class="language-switch mt-4">
+                <a href="/uk/" class="language-link-burger" data-lang="uk">Українська</a> |
+                <a href="/" class="language-link-burger" data-lang="pl">Polski</a> |
+                <a href="/en/" class="language-link-burger" data-lang="en">English</a>
+            </div>
+            <div class="social-links mt-4">
+                <a href="https://facebook.com/mhsalonfryzjerski" target="_blank" rel="noopener noreferrer"
+                    aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="https://instagram.com/mhsalonfryzjerski" target="_blank" rel="noopener noreferrer"
+                    aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero section -->
+    <section id="hero" class="hero-section">
+        <div class="parallax-bg"></div>
+        <div class="hero-content">
+            <div class="text-container" data-aos="fade-up">
+                <h1 class="animated-text parallax-text" data-depth="0.2">MH Salon Fryzjerski</h1>
+                <p class="tagline parallax-text" data-i18n="hero.subtitle">Piękno zaczyna się tutaj</p>
+            </div>
+
+            <div class="bottom-elements">
+                <a href="https://booksy.com/pl-pl/294693_mh-beauty-room_fryzjer_3_warszawa#ba_s=sh_1"
+                    class="scroll-down-btn" target="_blank" rel="noopener noreferrer">
+                    <span data-i18n="hero.button">Zapisz się</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+
+                <div class="scroll-indicator">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About section -->
+    <section id="about" class="about-section">
+        <!-- Background image with parallax effect -->
+        <div class="bg-parallax">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Wnętrze salonu fryzjerskiego MH" class="bg-image" width="1350" height="900" loading="lazy">
+            <div class="bg-overlay"></div>
+        </div>
+
+        <div class="container content-wrapper" data-aos="fade-up">
+            <div class="text-center mb-5">
+                <!-- Logo/name with gradient effect -->
+                <h2 class="display-4 fw-bold mb-3">
+                    <span class="brand-name">
+                        MH <span class="salon-part">Salon</span>
+                        <span class="fryzjerski-part">Fryzjerski</span>
+                        <span class="highlight-dot"></span>
+                    </span>
+                </h2>
+
+                <!-- Decorative line -->
+                <div class="divider-custom"></div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="about-content">
+                        <p class="about-motto" data-i18n="about.motto">Twoja droga do idealnego stylu</p>
+
+                        <div class="about-text">
+                            <p data-i18n="about.content">W naszym salonie piękno rodzi się z profesjonalizmu, troski i
+                                indywidualnego podejścia do
+                                każdego klienta. Wierzymy, że styl to nie tylko wygląd zewnętrzny — to odzwierciedlenie
+                                Twojej osobowości i wewnętrznej harmonii.</p>
+
+                            <p data-i18n="about.content[1]">Nasi doświadczeni styliści z uwagą i pasją dbają o każdy
+                                detal. Używamy wyłącznie
+                                najlepszych kosmetyków do pielęgnacji włosów, sprawdzonych marek światowych, aby efekt
+                                cieszył Cię przez długi czas.</p>
+
+                            <div class="signature-line"></div>
+
+                            <blockquote class="salon-philosophy" data-i18n="about.philosophy">
+                                MH Salon Fryzjerski to nie tylko strzyżenie i stylizacja — to atmosfera przytulności,
+                                zaufania i inspiracji.
+                            </blockquote>
+
+                            <p data-i18n="about.content[2]">Nowoczesne techniki cięcia, koloryzacji i pielęgnacji
+                                pomagają nam podkreślić Twoją
+                                wyjątkowość i tworzyć stylizacje, które zachwycają.</p>
+
+                            <p class="conclusion" data-i18n="about.conclusion">Powierz nam swoje piękno — razem
+                                stworzymy Twój nowy wizerunek pełen
+                                pewności siebie, stylu i charyzmy.</p>
+                        </div>
+
+                        <div class="action-buttons text-center mt-5">
+                            <a href="https://instagram.com/mhsalonfryzjerski" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-instagram btn-lg rounded-pill px-4 me-3">
+                                <i class="bi bi-instagram me-2"></i>
+                                <span data-i18n="about.instagram">Nasz Instagram</span>
+                            </a>
+                            <a href="https://booksy.com/pl-pl/294693_mh-beauty-room_fryzjer_3_warszawa" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-primary btn-lg rounded-pill px-4">
+                                <i class="bi bi-calendar-check me-2"></i>
+                                <span data-i18n="about.booking">Umów się online</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+
+    <section id="gallery" class="gallery-section">
+        <div class="wrapper">
+            <h2 class="gallery-title" data-i18n="gallery.title">Nasze Realizacje</h2>
+            <div class="options">
+                <!-- Стрелка назад -->
+                <button class="arrow arrow-left" aria-label="Предыдущий слайд"></button>
+                <div class="option active" style="background-image: url(images/gallery/hair1.jpg)"></div>
+                <div class="option" style="background-image: url(images/gallery/hair2.jpg)"></div>
+                <div class="option" style="background-image: url(images/gallery/hair3.jpg)"></div>
+                <div class="option" style="background-image: url(images/gallery/hair4.jpg)"></div>
+                <div class="option" style="background-image: url(images/gallery/hair5.jpg)"></div>
+                <div class="option" style="background-image: url(images/gallery/hair6.jpg)"></div>
+                <!-- Стрелка вперёд -->
+                <button class="arrow arrow-right" aria-label="Следующий слайд"></button>
+            </div>
+            <div class="gallery-buttom">
+                <a href="https://booksy.com/pl-pl/294693_mh-beauty-room_fryzjer_3_warszawa#reviews-section"
+                    class="gallery-down-btn" target="_blank" rel="noopener noreferrer">
+                    <span data-i18n="gallery.button">Wiencej robut</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- отзывы -->
+
+
+    <!-- Services section -->
+    <section id="services" class="services-split-section">
+        <!-- New beautiful heading -->
+        <div class="services-intro">
+            <div class="container">
+                <div class="intro-content" data-aos="fade-up">
+                    <h2 class="intro-title" data-i18n="services.title">Nasze Usługi</h2>
+                    <div class="intro-divider">
+                        <span class="line left"></span>
+                        <i class="bi bi-scissors"></i>
+                        <span class="line right"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid p-0">
+            <!-- Women's services -->
+            <div class="service-row">
+                <div class="service-image-wrapper">
+                    <div class="service-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e')">
+                    </div>
+                </div>
+                <div class="service-content women-services">
+                    <div class="service-header">
+                        <h3 class="section-title" data-i18n="services.women">Dla Kobiet</h3>
+                        <div class="section-divider"></div>
+                    </div>
+
+                    <div class="service-list" id="women-services-list">
+                        <div class="service-item">
+                            <div class="service-name" data-i18n="services.women[0]">Strzyżenie damskie</div>
+                            <div class="service-dots"></div>
+                            <div class="service-price">150 zł</div>
+                        </div>
+
+                        <div class="service-item">
+                            <div class="service-name" data-i18n="services.women[1]">Modelowanie włosów</div>
+                            <div class="service-dots"></div>
+                            <div class="service-price">120 zł</div>
+                        </div>
+
+                        <div class="service-item">
+                            <div class="service-name" data-i18n="services.women[2]">Koloryzacja pełna</div>
+                            <div class="service-dots"></div>
+                            <div class="service-price">250 zł</div>
+                        </div>
+
+                        <div class="service-item">
+                            <div class="service-name" data-i18n="services.women[3]">Balejaż/Ombre</div>
+                            <div class="service-dots"></div>
+                            <div class="service-price">350 zł</div>
+                        </div>
+
+                        <div class="service-item">
+                            <div class="service-name" data-i18n="services.women[4]">Pielęgnacja keratinowa</div>
+                            <div class="service-dots"></div>
+                            <div class="service-price">300 zł</div>
+                        </div>
+
+                        <div class="service-item">
+                            <div class="service-name" data-i18n="services.women[5]">Fryzura ślubna</div>
+                            <div class="service-dots"></div>
+                            <div class="service-price">400 zł</div>
+                        </div>
+
+                        <div class="service-item">
+                            <div class="service-name" data-i18n="services.women[6]">Strzyżenie dziewczynki</div>
+                            <div class="service-dots"></div>
+                            <div class="service-price">70 zł</div>
+                        </div>
+
+                        <div class="service-item">
+                            <div class="service-name" data-i18n="services.women[7]">Plecenie warkoczyków</div>
+                            <div class="service-dots"></div>
+                            <div class="service-price">90 zł</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Men's services -->
+            <div class="service-row">
+                <div class="service-content men-services">
+                    <div class="service-header">
+                        <h3 class="section-title" data-i18n="services.men">Dla Mężczyzn</h3>
+                        <div class="section-divider"></div>
+                    </div>
+
+                    <div class="service-list" id="men-services-list">
+                        <div class="service-item">
+                            <div class="service-name" data-i18n="services.men[0]">Strzyżenie klasyczne</div>
+                            <div class="service-dots"></div>
+                            <div class="service-price">80 zł</div>
+                        </div>
+
+                        <div class="service-item">
+                            <div class="service-name" data-i18n="services.men[1]">Strzyżenie maszynką</div>
+                            <div class="service-dots"></div>
+                            <div class="service-price">60 zł</div>
+                        </div>
+
+                        <div class="service-item">
+                            <div class="service-name" data-i18n="services.men[2]">Golenie twarzy</div>
+                            <div class="service-dots"></div>
+                            <div class="service-price">70 zł</div>
+                        </div>
+
+                        <div class="service-item">
+                            <div class="service-name" data-i18n="services.men[3]">Modelowanie brody</div>
+                            <div class="service-dots"></div>
+                            <div class="service-price">90 zł</div>
+                        </div>
+
+                        <div class="service-item">
+                            <div class="service-name" data-i18n="services.men[4]">Koloryzacja włosów</div>
+                            <div class="service-dots"></div>
+                            <div class="service-price">150 zł</div>
+                        </div>
+
+                        <div class="service-item">
+                            <div class="service-name" data-i18n="services.men[5]">Pielęgnacja brody</div>
+                            <div class="service-dots"></div>
+                            <div class="service-price">120 zł</div>
+                        </div>
+
+                        <div class="service-item">
+                            <div class="service-name" data-i18n="services.men[6]">Strzyżenie chłopca</div>
+                            <div class="service-dots"></div>
+                            <div class="service-price">60 zł</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-image-wrapper">
+                    <div class="service-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1')">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <!-- Decorative elements -->
+            <div class="contact-decoration scissors"></div>
+            <div class="contact-decoration comb"></div>
+
+            <div class="container" data-aos="fade-up">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="contact.title">Kontakt</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle" data-i18n="contact.subtitle">Umów się na wizytę lub odwiedź nasz salon
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact information block -->
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <i class="bi bi-telephone"></i>
+                            <div>
+                                <h3 data-i18n="contact.phone">Telefon</h3>
+                                <a href="tel:+48784466844">+48 784 466 844</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <i class="bi bi-geo-alt"></i>
+                            <div>
+                                <h3 data-i18n="contact.address">Adres</h3>
+                                <address>ul. Szlenkierow 1, Warszawa</address>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <i class="bi bi-clock"></i>
+                            <div>
+                                <h3 data-i18n="contact.hours">Godziny otwarcia</h3>
+                                <p data-i18n="contact.hours_value">Pon-Pt: 8:00 - 20:00<br>Sb: 9:00 - 16:00</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-social">
+                            <a href="https://instagram.com/mhsalonfryzjerski" target="_blank" rel="noopener noreferrer"
+                                class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="https://facebook.com/mhsalonfryzjerski" target="_blank" rel="noopener noreferrer"
+                                class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="https://m.me/mhsalonfryzjerski" target="_blank" rel="noopener noreferrer"
+                                class="social-icon" aria-label="Messenger"><i class="bi bi-messenger"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Map block -->
+                    <div class="contact-map">
+                        <div class="map-wrapper">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.3208537798123!2d20.96743327702626!3d52.23755555710202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecb0042edc393%3A0xa308050ed8240cd7!2sMH%20Salon%20fryzjerski!5e0!3m2!1sru!2spl!4v1747073283408!5m2!1sru!2spl"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade" aria-label="Lokalizacja salonu MH Fryzjer"
+                                title="Mapa lokalizacji MH Salon Fryzjerski">
+                            </iframe>
+                            <div class="map-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <button id="scrollToTopBtn" class="scroll-top-btn" aria-label="Przewiń do góry strony">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 15l-6-6-6 6" />
+        </svg>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-wave"></div>
+
+        <div class="container">
+            <div class="footer-content">
+                <!-- Logo with animation -->
+                <div class="footer-logo" data-aos="fade-up">
+                    <img src="images/logo.svg" alt="MH Salon Fryzjerski Logo" class="footer-logo-img" width="150"
+                        height="50">
+                </div>
+
+                <!-- Main footer menu -->
+                <nav class="footer-nav" data-aos="fade-up" data-aos-delay="100">
+                    <ul class="footer-menu">
+                        <li><a href="#home" class="footer-link" data-i18n="footer.links[0]">Strona Główna</a></li>
+                        <li><a href="#services" class="footer-link" data-i18n="footer.links[1]">Usługi</a></li>
+                        <li><a href="#gallery" class="footer-link" data-i18n="footer.links[2]">Galeria</a></li>
+                        <li><a href="#about" class="footer-link" data-i18n="footer.links[3]">O Nas</a></li>
+                        <li><a href="#contact" class="footer-link" data-i18n="footer.links[4]">Kontakt</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Social media -->
+                <div class="footer-social" data-aos="fade-up" data-aos-delay="200">
+                    <a href="https://instagram.com/mhsalonfryzjerski" target="_blank" rel="noopener noreferrer"
+                        class="social-icon" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com/mhsalonfryzjerski" target="_blank" rel="noopener noreferrer"
+                        class="social-icon" aria-label="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://tiktok.com/@mhsalonfryzjerski" target="_blank" rel="noopener noreferrer"
+                        class="social-icon" aria-label="TikTok">
+                        <i class="bi bi-tiktok"></i>
+                    </a>
+                    <a href="tel:+48784466844" class="social-icon" aria-label="Telefon">
+                        <i class="bi bi-telephone"></i>
+                    </a>
+                </div>
+
+                <!-- Contact information -->
+                <div class="footer-info" data-aos="fade-up" data-aos-delay="300">
+                    <p class="footer-address">
+                        <i class="bi bi-geo-alt"></i> ul. Szlenkierow 1, Warszawa
+                    </p>
+                    <p class="footer-hours">
+                        <i class="bi bi-clock"></i> Pon-Pt: 9:00-20:00 | Sob: 9:00-18:00
+                    </p>
+                </div>
+
+                <!-- Copyright -->
+                <div class="footer-copyright" data-aos="fade-up" data-aos-delay="400">
+                    <p data-i18n="footer.copyright">&copy; 2025 MH Salon Fryzjerski. Wszystkie prawa zastrzeżone.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Font loading optimization script -->
+    <script>
+        // Font loading optimization
+        (function () {
+            // Font loading optimization
+            if ("fonts" in document) {
+                Promise.all([
+                    document.fonts.load("1em Bodoni Moda"),
+                    document.fonts.load("1em Inter"),
+                    document.fonts.load("1em Poppins")
+                ]).then(function () {
+                    document.documentElement.classList.add("fonts-loaded");
+                });
+            }
+        })();
+    </script>
+
+    <!-- GSAP and ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <!-- AOS animations -->
+    <script src="libs/aos/aos.js" defer></script>
+
+    <!-- Custom scripts -->
+    <script src="js/i18n.js" defer></script>
+    <script src="js/script.js" defer></script>
+
+
+
+    <!-- Initialize AOS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                once: true,
+                offset: 100,
+                duration: 800
+            });
+        });
+    </script>
+</body>
+
+</html>

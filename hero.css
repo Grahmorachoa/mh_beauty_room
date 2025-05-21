@@ -1,0 +1,213 @@
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+    display: flex;
+    color: #fff;
+    text-align: center;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    will-change: transform;
+    background: url('/images/gallery/pobrane.jpg') center/cover;
+    /* background: url('https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover; */
+    z-index: 1;
+}
+
+.parallax-text {
+    position: relative;
+    will-change: transform;
+    transition: transform 0.1s linear;
+    transform-style: preserve-3d;
+
+}
+
+.hero-content {
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Text Container */
+.text-container {
+    perspective: 1000px;
+    /* Добавляет глубину */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.animated-text {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1em;
+    text-shadow: 0 5px 3px rgba(0, 0, 0, 0.5);
+}
+
+.tagline {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-shadow: 0 5px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Bottom Elements */
+.bottom-elements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+/* Scroll Down Button */
+.scroll-down-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 35px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    transition: all 0.3s ease;
+}
+
+.scroll-down-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+    transition: transform 0.3s ease;
+}
+
+.scroll-down-btn svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+}
+
+.scroll-down-btn:hover svg {
+    transform: translateX(4px);
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mouse {
+    width: 26px;
+    height: 42px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 13px;
+    position: relative;
+}
+
+.wheel {
+    position: absolute;
+    width: 4px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 2px;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scrollWheel 2s infinite;
+}
+
+
+.arrow-down {
+    width: 14px;
+    height: 14px;
+    position: relative;
+    margin: 2px 0;
+    opacity: 0;
+    animation: scrollArrow 2s infinite;
+}
+
+.arrow-down:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.arrow-down:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.arrow-down:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.arrow-down::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    transform: translateX(-50%);
+}
+
+.arrow-down::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid rgba(255, 255, 255, 0.7);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+    transform: translateX(-50%) rotate(45deg);
+}
+
+/* Animations */
+@keyframes scrollWheel {
+    0% {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, 10px);
+        opacity: 0;
+    }
+}
+
+@keyframes scrollArrow {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
